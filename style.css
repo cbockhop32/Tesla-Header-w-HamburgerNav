@@ -1,0 +1,218 @@
+@font-face {
+    src: url(fonts/TESLA.ttf);
+    font-family: tesla;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background:url(models.jpg);
+    background-size: cover;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 37px;
+    padding-top: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+
+ul {
+    list-style: none;
+    overflow: hidden;
+}
+
+li {
+    display: inline-block;
+    padding: 0 15px;
+    text-decoration: none;
+   
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+
+}
+
+li a:hover, h1 a:hover {
+    color: grey;
+    transition: all 0.6s ease;
+
+}
+
+.header .logo-left {
+    float: left;
+    width: 24%;
+    height: 100%;
+    padding: 0 10px;
+    margin: 0;
+    font-size: 16px;
+ 
+
+
+}
+
+.header .logo-left a {
+    font-family: tesla;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: lighter;
+    letter-spacing: 7px;
+    
+}
+
+
+.header .nav-center {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    
+    
+
+}
+
+.header .div-right {
+    float: right;
+    width: 24%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    
+
+    
+}
+
+
+.header .div-right .nav-right {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.header .div-right .menu-btn {
+    display: none;
+}
+
+/* Drop down menu adjustments */
+
+.header .div-right .menu {
+
+    display: inline-block;
+    max-height: 0;
+    padding: 0;
+    margin-top: 18px;
+    transition: max-height 0.4s ease-out;
+    background-color: rgba(255, 255, 255, 1);
+    min-width: 312px;
+    
+
+}
+
+
+
+.header .div-right .menu li {
+    display: block;
+    padding: 20px 10px;
+    margin: 0 15px;
+    text-align: left;
+    border-bottom: 1px solid lightgray;
+}
+
+.header .div-right .menu li a {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    color: black;
+   
+}
+
+
+/* Hamburger Menu to the right */
+
+.header .div-right .menu-icon {
+    display: inline-block;
+    position: relative;
+    padding: 0 18px 8px 12px;
+    cursor: pointer;
+   
+
+    
+
+}
+
+
+.header .div-right .menu-icon .nav-icon {
+
+    background: white;
+    width: 18px;
+    height: 2px;
+    position: relative;
+    display: block;
+    transition: background .2s ease-out;
+    top: 3px;
+   
+
+}
+
+.header .div-right .menu-icon .nav-icon:before {
+    content: "";
+    background: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -5px;
+    display: block;
+    transition: all 0.2s ease-out;
+    
+}
+
+.header .div-right .menu-icon .nav-icon:after {
+    content: "";
+    background: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 5px;
+    display: block;
+    transition: all 0.2s ease-out;
+    
+}
+
+
+
+.header .div-right .menu-btn:checked ~ .menu-icon .nav-icon:before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.header .div-right .menu-btn:checked ~ .menu-icon .nav-icon:after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.header .div-right .menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+}
+
+
+
+/* Expansion of Menu */
+
+.header .menu-btn:checked ~ .menu {
+    max-height: 900px;
+}
+
+
+
